@@ -240,6 +240,7 @@
     <Compile Include="Models\Asignacion.cs" />
     <Compile Include="Models\Portafolio_Balanceo.cs" />
     <Compile Include="Models\Gestion_Portafolio.cs" />
+    <Compile Include="Models\Programa.cs" />
     <Compile Include="Models\ResultadoLogin.cs" />
     <Compile Include="Models\Encargado.cs" />
     <Compile Include="Models\Equipo.cs" />
