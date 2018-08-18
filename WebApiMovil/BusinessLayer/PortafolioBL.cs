@@ -264,10 +264,10 @@ namespace WebApiMovil.BusinessLayer
 
                 if (msj.Equals(""))
                 {
-                    int pk = portafolioDA.RegistrarBalanceo();
+                    int pk = portafolioDA.RegistrarBalanceo(int.Parse(obj.id_user));
                     foreach (Prt_BalanceoTmp tmp in balanceotmp)
                     {
-                        portafolioDA.RegistrarBalanceoDetalle(tmp,pk);
+                        portafolioDA.RegistrarBalanceoDetalle(tmp,pk,int.Parse(obj.id_user));
                     }
 
                     retorno.resultado = 1;

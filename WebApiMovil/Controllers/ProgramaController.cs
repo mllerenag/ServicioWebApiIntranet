@@ -11,11 +11,9 @@ namespace WebApi.Controllers
 {
     public class ProgramaController : System.Web.Http.ApiController
     {
-        AsignarService asignarService;
         ProgramaService programaService;
         public ProgramaController()
         {
-            asignarService = new AsignarService();
             programaService = new ProgramaService();
         }
 

@@ -278,7 +278,7 @@ namespace WebApiMovil.DataLayer
             }
         }
 
-        public int RegistrarBalanceo()
+        public int RegistrarBalanceo(int id_user)
         {
             int retorno = 0;
             try
@@ -290,7 +290,7 @@ namespace WebApiMovil.DataLayer
                     using (SqlCommand command = new SqlCommand("[pa_spi_registrarBalanceo]", conection))
                     {
                         command.CommandType = CommandType.StoredProcedure;
-
+                        command.Parameters.AddWithValue("@vi_nid_usuario", id_user);
                         using (SqlDataReader dr = command.ExecuteReader())
                         {
                             if (dr.HasRows)
@@ -317,7 +317,7 @@ namespace WebApiMovil.DataLayer
             }
         }
 
-        public void RegistrarBalanceoDetalle(Prt_BalanceoTmp obj, int pk)
+        public void RegistrarBalanceoDetalle(Prt_BalanceoTmp obj, int pk, int id_user)
         {
             try
             {
@@ -331,6 +331,8 @@ namespace WebApiMovil.DataLayer
                         command.Parameters.AddWithValue("@vi_nid_balanceo", pk);
                         command.Parameters.AddWithValue("@vi_nid_solicitud", obj.solicitud);
                         command.Parameters.AddWithValue("@vi_nu_asignado", obj.configurado);
+                        //command.Parameters.AddWithValue("@vi_nid_usuario", id_user);
+                        
                         using (SqlDataReader dr = command.ExecuteReader())
                         {
 

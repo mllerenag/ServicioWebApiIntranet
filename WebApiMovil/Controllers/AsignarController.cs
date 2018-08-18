@@ -11,6 +11,7 @@ namespace WebApi.Controllers
 {
     public class AsignarController : System.Web.Http.ApiController
     {
+        /*
         AsignarService asignarService;
 
         public AsignarController()
@@ -244,5 +245,6 @@ namespace WebApi.Controllers
                 throw;
             }
         }
+        */
     }
 }

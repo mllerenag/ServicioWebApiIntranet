@@ -54,6 +54,10 @@ namespace WebApiMovil.Models
         public int codigo_portafolio { get; set; }
 
         [DataMember]
+        public int nro_propuestas { get; set; }
+
+
+        [DataMember]
         public string co_estado { get; set; }
     }
 

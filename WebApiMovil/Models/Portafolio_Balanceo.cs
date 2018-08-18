@@ -97,6 +97,7 @@ namespace WebApiMovil.Models
     {
         public List<string> lista_parametros { get; set; }
         public string portafolio { get; set; }
+        public string id_user { get; set; }
     }
 
     [DataContract]
