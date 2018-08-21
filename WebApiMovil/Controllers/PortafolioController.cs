@@ -46,7 +46,19 @@ namespace WebApi.Controllers
                 throw;
             }
         }
-
+        [HttpPost]
+        [ActionName("ObtenerComponentes")]
+        public List<Portafolio_Componentes> ObtenerComponentes(Portafolio_Request obj)
+        {
+            try
+            {
+                return portafolioService.ObtenerComponentes(obj);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
         [HttpPost]
         [ActionName("obtenerDatos")]
         public Prt_Balanceo obtenerDatos(Portafolio_Request obj)

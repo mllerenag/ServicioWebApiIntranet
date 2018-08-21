@@ -42,6 +42,17 @@ namespace WebApiMovil.Services
             }
         }
 
+        public List<Portafolio_Componentes> ObtenerComponentes(Portafolio_Request obj)
+        {
+            try
+            {
+                return portafolioBL.ObtenerComponentes(obj);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
         public Prt_Balanceo obtenerDatos(Portafolio_Request obj)
         {
             try

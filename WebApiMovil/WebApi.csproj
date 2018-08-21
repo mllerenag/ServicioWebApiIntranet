@@ -252,6 +252,7 @@
     <Compile Include="Models\Paginacion.cs" />
     <Compile Include="Models\Plan.cs" />
     <Compile Include="Models\Responsable.cs" />
+    <Compile Include="Models\Solicitud.cs" />
     <Compile Include="Models\Trabajador.cs" />
     <Compile Include="Models\Ubigeo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

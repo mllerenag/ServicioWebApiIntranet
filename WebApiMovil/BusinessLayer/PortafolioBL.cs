@@ -305,6 +305,16 @@ namespace WebApiMovil.BusinessLayer
             }
         }
 
-
+        public List<Portafolio_Componentes> ObtenerComponentes(Portafolio_Request entidad)
+        {
+            try
+            {
+                return portafolioDA.ObtenerComponentes(entidad);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }
