@@ -123,7 +123,14 @@ namespace WebApiMovil.BusinessLayer
                 mensaje += obj.no_nombre_componente + ")";
                 mensaje += "<br>";
 
-                mailBL.EnviarMail(obj.resp_correo,"","Asignación de Recursos",mensaje, new List<string>(), true, false);
+                try
+                {
+                    mailBL.EnviarMail(obj.resp_correo, "", "Asignación de Recursos", mensaje, new List<string>(), true, false);
+                }
+                catch (Exception ex)
+                {
+
+                }
             }
         }
 
@@ -153,8 +160,14 @@ namespace WebApiMovil.BusinessLayer
                     mensaje += "<p>" + obj.nid_balanceo + " - " + obj.no_nombre_componente + " : " + obj.nu_balanceo + " " + obj.no_nombre_recurso;
                 }
 
-                mailBL.EnviarMail(balanceos_tmp[0].bala_correo, "", "Aprobacion de Balanceo", mensaje, new List<string>(), true, false);
-            
+                try
+                {
+                    mailBL.EnviarMail(balanceos_tmp[0].bala_correo, "", "Aprobacion de Balanceo", mensaje, new List<string>(), true, false);
+                }
+                catch (Exception ex)
+                {
+
+                }
             }
         }
     }
