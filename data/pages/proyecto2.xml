@@ -1,5 +1,5 @@
 ﻿<form title="Proyecto" subtitle="Seleccionar Proyecto">
-  <sql caption="Proyecto"  data-form="1" data-filter="1"  >
+  <sql caption="Proyecto">
 SELECT [nid_proyecto]
       ,[no_codigo]
       ,[no_nombre]
