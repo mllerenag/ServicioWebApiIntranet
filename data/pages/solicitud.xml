@@ -1,0 +1,48 @@
+﻿<form title="Solicitud" subtitle="Seleccionar Solicitudes">
+  <sql caption="Solicitud">
+SELECT [nid_solicitud]
+      ,[co_solicitud]
+      ,[no_nombre]
+      ,[nid_componente]
+      ,[nid_recurso]
+      ,[nu_solicitado]
+      ,[fe_solicitud]
+  FROM [TBL_SOLICITUD]
+    <column name="co_solicitud" caption="C&amp;oacute;digo" />
+    <column name="nid_solicitud" visible="0" />    
+    <column name="no_nombre" caption="Nombre" />        
+    <column name="nid_componente" caption="Componente" select="SELECT nid_componente,coalesce(A.[no_nombre],'') +'-'+ coalesce(B.[no_nombre],'') +'-'+ coalesce(D.[no_nombre],'') FROM TBL_COMPONENTE C LEFT JOIN TBL_PROGRAMA A ON C.[nid_programa]=A.[nid_programa] LEFT JOIN TBL_PROYECTO B ON C.[nid_proyecto]=B.[nid_proyecto] LEFT JOIN TBL_PORTAFOLIO D ON  C.[nid_portafolio]=D.[nid_portafolio] " />
+    <column name="nid_recurso" caption="Recurso" select="SELECT nid_recurso,no_nombre FROM MST_RECURSO" />
+    <column name="nu_solicitado" caption="N&amp;uacute;mero" />    
+    <column name="fe_solicitud" caption="Fecha"  />        
+    <update>
+    update [TBL_SOLICITUD] SET %%FIELDVALUE%% WHERE %%KEY%%
+    </update>
+    <insert>
+    insert into [TBL_SOLICITUD] (%%FIELDS%%) values(%%VALUES%%)
+    </insert>
+    <delete>
+    delete from [TBL_SOLICITUD] WHERE %%KEY%%
+    </delete>
+    <sql parentcols="nid_solicitud" childcols="nid_solicitud" caption="Detalle de Balanceo" > 
+        SELECT [nid_detalle]
+            ,[nid_solicitud]
+            ,[nid_balanceo]
+            ,[no_balanceo]
+        FROM [TBL_DETALLE_BALANCEO]
+      <column name="nid_solicitud" visible="0" />
+      <column name="nid_detalle" visible="0" />
+      <column name="nid_balanceo" caption="Balanceo" select="SELECT nid_balanceo,co_estado FROM [TBL_BALANCEO]"  />      
+      <column name="no_balanceo" caption="Nombre" />      
+      <update>
+      update [TBL_DETALLE_BALANCEO] SET %%FIELDVALUE%% WHERE %%KEY%%
+      </update>
+      <insert>
+      insert into [TBL_DETALLE_BALANCEO] (%%FIELDS%%) values(%%VALUES%%)
+      </insert>
+      <delete>
+      delete from [TBL_DETALLE_BALANCEO] WHERE %%KEY%%
+      </delete>                      
+    </sql>
+  </sql>
+</form>

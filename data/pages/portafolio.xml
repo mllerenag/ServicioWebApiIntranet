@@ -1,0 +1,81 @@
+﻿<form title="Portafolio" subtitle="Seleccionar Portafolio">
+  <sql caption="Portafolio">
+SELECT [nid_portafolio] nid
+      ,[no_codigo]
+      ,[no_nombre] [Nombre]
+      ,[nid_categoria]
+      ,[nid_prioridad]
+      ,[nid_responsable]
+      ,[nid_responsable2]
+      ,[tx_descripcion] [Descripción]
+      ,[fl_activo] [Activo]
+      ,[no_usuario_red] "Usuarios de Red"
+      ,[no_estacion_red] [Estaciones de Red]
+      ,[fe_crea] [Fecha de Creación]
+      ,[nid_usuario_crea] 
+      ,[fe_cambio] [Fecha de Cambio]
+      ,[nid_usuario_cambio]
+      ,[co_estado] [Estado]
+  FROM [TBL_PORTAFOLIO]
+    <column name="no_codigo" caption="C&amp;oacute;digo" />
+    <column name="nid" visible="0" />    
+    <column name="nid_categoria" caption="Categor&amp;iacute;a" select="SELECT nid_categoria,no_nombre FROM MST_CATEGORIA" />
+    <column name="nid_prioridad" caption="Prioridad" select="SELECT nid_prioridad,no_nombre FROM MST_PRIORIDAD" />
+    <column name="nid_responsable" caption="Responsable" select="SELECT nid_usuario,no_nombre FROM TBL_USUARIO" />    
+    <column name="nid_responsable2" caption="Responsable&amp;nbsp;2" select="SELECT nid_usuario,no_nombre FROM TBL_USUARIO" />        
+    <column name="nid_usuario_cambio" caption="Usuario Cambio" select="SELECT nid_usuario,no_nombre FROM TBL_USUARIO" />        
+    <column name="nid_usuario_crea" caption="Usuario Creaci&amp;oacute;n" select="SELECT nid_usuario,no_nombre FROM TBL_USUARIO" />  
+    <update>
+    update [TBL_PORTAFOLIO] SET %%FIELDVALUE%% WHERE %%KEY%%
+    </update>
+    <insert>
+    insert into [TBL_PORTAFOLIO] (%%FIELDS%%) values(%%VALUES%%)
+    </insert>
+    <delete>
+    delete from [TBL_PORTAFOLIO] WHERE %%KEY%%
+    </delete>
+    <sql parentcols="nid" childcols="nid_portafolio" caption="Recursos" > 
+      SELECT [nid_relacion]
+          ,[nid_portafolio]
+          ,[nid_recurso]
+          ,[nu_recursototal]
+          ,[nu_recursodisponible]
+          ,[nu_recursoconsumido]
+        FROM [TBL_PORTAFOLIO_RECURSO]
+      <column name="nid_relacion" visible="0" />
+      <column name="nid_portafolio" visible="0" />
+      <column name="nid_recurso" caption="Recurso" select="SELECT nid_recurso,no_nombre FROM [MST_RECURSO]"  />      
+      <column name="nu_recursototal" caption="Total" />      
+      <column name="nu_recursodisponible" caption="Disponible" />      
+      <column name="nu_recursoconsumido" caption="Consumido" />
+      <update>
+      update [TBL_PORTAFOLIO_RECURSO] SET %%FIELDVALUE%% WHERE %%KEY%%
+      </update>
+      <insert>
+      insert into [TBL_PORTAFOLIO_RECURSO] (%%FIELDS%%) values(%%VALUES%%)
+      </insert>
+      <delete>
+      delete from [TBL_PORTAFOLIO_RECURSO] WHERE %%KEY%%
+      </delete>                      
+    </sql>
+    <sql parentcols="nid" childcols="nid_portafolio" caption="Iniciativas" > 
+      SELECT [nid_relacion]
+          ,[nid_portafolio]
+          ,[nid_iniciativa]
+        FROM [TBL_PORTAFOLIO_INICIATIVA]
+      <column name="nid_relacion" visible="0" />
+      <column name="nid_portafolio" visible="0" />
+      <column name="nid_iniciativa" caption="Iniciativa" select="SELECT nid_iniciativa,no_nombre FROM [MST_INICIATIVA]"  />      
+      <update>
+      update [TBL_PORTAFOLIO_INICIATIVA] SET %%FIELDVALUE%% WHERE %%KEY%%
+      </update>
+      <insert>
+      insert into [TBL_PORTAFOLIO_INICIATIVA] (%%FIELDS%%) values(%%VALUES%%)
+      </insert>
+      <delete>
+      delete from [TBL_PORTAFOLIO_INICIATIVA] WHERE %%KEY%%
+      </delete>   
+    </sql>
+  </sql>
+
+</form>

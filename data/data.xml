@@ -1,0 +1,126 @@
+<xml>
+<campana codigo="100001" nombre="Campana Publicitaria 1 " fechainicio="01/02/2018" fechafin="01/06/2018" />
+<campana codigo="100002" nombre="Campana Publicitaria 2 " fechainicio="01/02/2018" fechafin="01/06/2018"/>
+<campana codigo="100003" nombre="Campana Publicitaria 3 " producto="Producto 1 " />
+<campana codigo="100004" nombre="Campana Publicitaria 4 " />
+<campana codigo="100005" nombre="Campana Publicitaria 5 " />
+<campana codigo="100006" nombre="Campana Publicitaria 6 " />
+<campana codigo="100007" nombre="Campana Publicitaria 7 " fechainicio="01/02/2018" fechafin="01/06/2018"/>
+<campana codigo="100008" nombre="Campana Publicitaria 8 " />
+<campana codigo="100009" nombre="Campana Publicitaria 9 " />
+<campana codigo="100010" nombre="Campana Publicitaria 10 " />
+<campana codigo="100011" nombre="Campana Publicitaria 11 " />
+<campana codigo="100012" nombre="Campana Publicitaria 12 " />
+<campana codigo="100013" nombre="Campana Publicitaria 13 " />
+<campana codigo="100014" nombre="Campana Publicitaria 14 " />
+<campana codigo="100015" nombre="Campana Publicitaria 15 " />
+<requerimiento codigo="100001" nombre="Campana Publicitaria 1 " />
+<requerimiento codigo="100002" nombre="Campana Publicitaria 2 " />
+<requerimiento codigo="100003" nombre="Campana Publicitaria 3 " />
+<requerimiento codigo="100004" nombre="Campana Publicitaria 4 " />
+<requerimiento codigo="100005" nombre="Campana Publicitaria 5 " />
+<requerimiento codigo="100006" nombre="Campana Publicitaria 6 " />
+<requerimiento codigo="100007" nombre="Campana Publicitaria 7 " />
+<requerimiento codigo="100008" nombre="Campana Publicitaria 8 " />
+<requerimiento codigo="100009" nombre="Campana Publicitaria 9 " />
+<requerimiento codigo="100010" nombre="Campana Publicitaria 10 " />
+<requerimiento codigo="100011" nombre="Campana Publicitaria 11 " />
+<requerimiento codigo="100012" nombre="Campana Publicitaria 12 " />
+<requerimiento codigo="100013" nombre="Campana Publicitaria 13 " />
+<requerimiento codigo="100014" nombre="Campana Publicitaria 14 " />
+<requerimiento codigo="100015" nombre="Campana Publicitaria 15 " />
+<solicitud codigo="100001" nombre="Campana Publicitaria 1 " fecha="01/02/2018" fechaenvio="01/06/2018" solicitante="Juan Torres"  situacion="Pendiente" />
+<solicitud codigo="100002" nombre="Campana Publicitaria 2 "  fecha="01/02/2018" fechaenvio="01/06/2018" solicitante="Juan Torres"  situacion="Pendiente"  />
+<solicitud codigo="100003" nombre="Campana Publicitaria 3 "  fecha="01/02/2018" fechaenvio="01/06/2018" solicitante="Juan Torres"  situacion="Pendiente"  />
+<solicitud codigo="100004" nombre="Campana Publicitaria 4 "  fecha="01/02/2018" fechaenvio="01/06/2018" solicitante="Juan Torres"  situacion="Pendiente"  />
+<solicitud codigo="100005" nombre="Campana Publicitaria 5 "  fecha="01/02/2018" fechaenvio="01/06/2018" solicitante="Juan Torres"  situacion="Pendiente"  />
+<solicitud codigo="100006" nombre="Campana Publicitaria 6 "  fecha="01/02/2018" fechaenvio="01/06/2018" solicitante="Juan Torres" situacion="Pendiente"  />
+<solicitud codigo="100007" nombre="Campana Publicitaria 7 "  fecha="01/02/2018" fechaenvio="01/06/2018" solicitante="Juan Torres"  situacion="Pendiente"  />
+<solicitud codigo="100008" nombre="Campana Publicitaria 8 "  fecha="01/02/2018" fechaenvio="01/06/2018" solicitante="Juan Torres"  situacion="Pendiente"  />
+<solicitud codigo="100009" nombre="Campana Publicitaria 9 "  fecha="01/02/2018" fechaenvio="01/06/2018" solicitante="Juan Torres"  situacion="Pendiente" />
+<solicitud codigo="100010" nombre="Campana Publicitaria 10 "  fecha="01/02/2018" fechaenvio="01/06/2018" solicitante="Juan Torres"  situacion="Pendiente"  />
+<solicitud codigo="100011" nombre="Campana Publicitaria 11 "  fecha="01/02/2018" fechaenvio="01/06/2018" solicitante="Juan Torres"  situacion="Pendiente"  />
+<solicitud codigo="100012" nombre="Campana Publicitaria 12 "  fecha="01/02/2018" fechaenvio="01/06/2018" solicitante="Juan Torres"  situacion="Pendiente"  />
+<solicitud codigo="100013" nombre="Campana Publicitaria 13 "  fecha="01/02/2018" fechaenvio="01/06/2018" solicitante="Juan Torres"  situacion="Pendiente"  />
+<solicitud codigo="100014" nombre="Campana Publicitaria 14 "  fecha="01/02/2018" fechaenvio="01/06/2018" solicitante="Juan Torres"  situacion="Pendiente"  />
+<solicitud codigo="100015" nombre="Campana Publicitaria 15 "  fecha="01/02/2018" fechaenvio="01/06/2018" solicitante="Juan Torres"  situacion="Pendiente"  />
+<producto codigo="100001" nombre="Producto 1 " />
+<producto codigo="100002" nombre="Producto 2 " />
+<producto codigo="100003" nombre="Producto 3 " />
+<producto codigo="100004" nombre="Producto 4 " />
+<producto codigo="100005" nombre="Producto 5 " />
+<producto codigo="100006" nombre="Producto 6 " />
+<producto codigo="100007" nombre="Producto 7 " />
+<producto codigo="100008" nombre="Producto 8 " />
+<producto codigo="100009" nombre="Producto 9 " />
+<producto codigo="100010" nombre="Producto 10 " />
+<producto codigo="100011" nombre="Producto 11 " />
+<producto codigo="100012" nombre="Producto 12 " />
+<producto codigo="100013" nombre="Producto 13 " />
+<producto codigo="100014" nombre="Producto 14 " />
+<producto codigo="100015" nombre="Producto 15 " />
+<macroentorno codigo="100001" entornopolitico="xxxxx" entornoeconomico="xxxxx" entornosocial="xxxxx"  entornotecnologico="xxxxx" entornolegal="xxxxx"  />
+<macroentorno codigo="100002" entornopolitico="xxxxx" entornoeconomico="xxxxx" entornosocial="xxxxx"  entornotecnologico="xxxxx" entornolegal="xxxxx"  />
+<macroentorno codigo="100003" entornopolitico="xxxxx" entornoeconomico="xxxxx" entornosocial="xxxxx"  entornotecnologico="xxxxx" entornolegal="xxxxx"  />
+<macroentorno codigo="100004" entornopolitico="xxxxx" entornoeconomico="xxxxx" entornosocial="xxxxx"  entornotecnologico="xxxxx" entornolegal="xxxxx"  />
+<macroentorno codigo="100005" entornopolitico="xxxxx" entornoeconomico="xxxxx" entornosocial="xxxxx"  entornotecnologico="xxxxx" entornolegal="xxxxx"  />
+<macroentorno codigo="100006" entornopolitico="xxxxx" entornoeconomico="xxxxx" entornosocial="xxxxx"  entornotecnologico="xxxxx" entornolegal="xxxxx"  />
+<macroentorno codigo="100007" entornopolitico="xxxxx" entornoeconomico="xxxxx" entornosocial="xxxxx"  entornotecnologico="xxxxx" entornolegal="xxxxx"  />
+<macroentorno codigo="100008"  />
+<macroentorno codigo="100009"  />
+<macroentorno codigo="100010"  />
+<macroentorno codigo="100011"  />
+<macroentorno codigo="100012"  />
+<macroentorno codigo="100013"  />
+<macroentorno codigo="100014"  />
+<macroentorno codigo="100015"  />
+<microentorno codigo="100001" analisisporter1="xxxxx" analisisporter2="xxxxx" analisisporter3="xxxxx" analisisporter4="xxxxx" analisisporter5="xxxxx" intensidadfuerzaporter1="1" intensidadfuerzaporter2="2" intensidadfuerzaporter3="3" intensidadfuerzaporter4="1" intensidadfuerzaporter5="1"/>
+<microentorno codigo="100002" analisisporter1="xxxxx" analisisporter2="xxxxx" analisisporter3="xxxxx" analisisporter4="xxxxx" analisisporter5="xxxxx"  intensidadfuerzaporter1="1" intensidadfuerzaporter2="2" intensidadfuerzaporter3="3" intensidadfuerzaporter4="1" intensidadfuerzaporter5="1"/>
+<microentorno codigo="100003" analisisporter1="xxxxx" analisisporter2="xxxxx" analisisporter3="xxxxx" analisisporter4="xxxxx" analisisporter5="xxxxx"   intensidadfuerzaporter1="1" intensidadfuerzaporter2="2" intensidadfuerzaporter3="3" intensidadfuerzaporter4="1" intensidadfuerzaporter5="1"/>
+<microentorno codigo="100004" analisisporter1="xxxxx" analisisporter2="xxxxx" analisisporter3="xxxxx" analisisporter4="xxxxx" analisisporter5="xxxxx"  intensidadfuerzaporter1="1" intensidadfuerzaporter2="2" intensidadfuerzaporter3="3" intensidadfuerzaporter4="1" intensidadfuerzaporter5="1"/>
+<microentorno codigo="100005" analisisporter1="xxxxx" analisisporter2="xxxxx" analisisporter3="xxxxx" analisisporter4="xxxxx" analisisporter5="xxxxx" intensidadfuerzaporter1="1" intensidadfuerzaporter2="2" intensidadfuerzaporter3="3" intensidadfuerzaporter4="1" intensidadfuerzaporter5="1"/>
+<microentorno codigo="100006" analisisporter1="xxxxx" analisisporter2="xxxxx" analisisporter3="xxxxx" analisisporter4="xxxxx" analisisporter5="xxxxx" intensidadfuerzaporter1="1" intensidadfuerzaporter2="2" intensidadfuerzaporter3="3" intensidadfuerzaporter4="1" intensidadfuerzaporter5="1"/>
+<microentorno codigo="100007" analisisporter1="xxxxx" analisisporter2="xxxxx" analisisporter3="xxxxx" analisisporter4="xxxxx" analisisporter5="xxxxx"  intensidadfuerzaporter1="1" intensidadfuerzaporter2="2" intensidadfuerzaporter3="3" intensidadfuerzaporter4="1" intensidadfuerzaporter5="1"/>
+<microentorno codigo="100008"  />
+<microentorno codigo="100009"  />
+<microentorno codigo="100010"  />
+<microentorno codigo="100011"  />
+<microentorno codigo="100012"  />
+<microentorno codigo="100013"  />
+<microentorno codigo="100014"  />
+<microentorno codigo="100015"  />
+<foda codigo="100001" analisisfortalezas="xxxxx" analisisdebilidades="xxxxx" analisisoportunidades="xxxxx" analisisamenazas="xxxxx" analisisestrategiasfo="xxxxx" analisisestrategiasfa="yyyyyyyy" analisisestrategiasdo="yyyyyyyy" analisisestrategiasda="yyyyyyyyy" />
+<foda codigo="100002" analisisfortalezas="xxxxx" analisisdebilidades="xxxxx" analisisoportunidades="xxxxx" analisisamenazas="xxxxx" analisisestrategiasfo="xxxxx" analisisestrategiasfa="yyyyyyyy" analisisestrategiasdo="yyyyyyyy" analisisestrategiasda="yyyyyyyyy" />
+<foda codigo="100003" analisisfortalezas="xxxxx" analisisdebilidades="xxxxx" analisisoportunidades="xxxxx" analisisamenazas="xxxxx" analisisestrategiasfo="xxxxx" analisisestrategiasfa="yyyyyyyy" analisisestrategiasdo="yyyyyyyy" analisisestrategiasda="yyyyyyyyy" />
+<foda codigo="100004" analisisfortalezas="xxxxx" analisisdebilidades="xxxxx" analisisoportunidades="xxxxx" analisisamenazas="xxxxx" analisisestrategiasfo="xxxxx" analisisestrategiasfa="yyyyyyyy" analisisestrategiasdo="yyyyyyyy" analisisestrategiasda="yyyyyyyyy" />
+<foda codigo="100005" analisisfortalezas="xxxxx" analisisdebilidades="xxxxx" analisisoportunidades="xxxxx" analisisamenazas="xxxxx" analisisestrategiasfo="xxxxx" analisisestrategiasfa="yyyyyyyy" analisisestrategiasdo="yyyyyyyy" analisisestrategiasda="yyyyyyyyy" />
+<foda codigo="100006" analisisfortalezas="xxxxx" analisisdebilidades="xxxxx" analisisoportunidades="xxxxx" analisisamenazas="xxxxx" analisisestrategiasfo="xxxxx" analisisestrategiasfa="yyyyyyyy" analisisestrategiasdo="yyyyyyyy" analisisestrategiasda="yyyyyyyyy" />
+<foda codigo="100007" analisisfortalezas="xxxxx" analisisdebilidades="xxxxx" analisisoportunidades="xxxxx" analisisamenazas="xxxxx" analisisestrategiasfo="xxxxx" analisisestrategiasfa="yyyyyyyy" analisisestrategiasdo="yyyyyyyy" analisisestrategiasda="yyyyyyyyy" />
+<foda codigo="100008"  />
+<foda codigo="100009"  />
+<foda codigo="100010"  />
+<foda codigo="100011"  />
+<foda codigo="100012"  />
+<foda codigo="100013"  />
+<foda codigo="100014"  />
+<foda codigo="100015"  />
+<segmentacion codigo="100001" variables="" />
+<segmentacion codigo="100002" variables="ubicacion,ventas" />
+<segmentacion codigo="100003" variables="ubicacion,ventas" />
+<segmentacion codigo="100004" variables="" />
+<segmentacion codigo="100005" variables="" />
+<segmentacion codigo="100006" variables="" />
+<segmentacion codigo="100007" variables="" />
+<segmentacion codigo="100008" variables="" />
+<segmentacion codigo="100009" variables="" />
+<segmentacion codigo="100010" variables="" />
+<segmentacion codigo="100011" variables="" />
+<segmentacion codigo="100012" variables="" />
+<segmentacion codigo="100013" variables="" />
+<segmentacion codigo="100014" variables="" />
+<segmentacion codigo="100015" variables="" />
+<variable nombre="ubicacion" />
+<variable nombre="ventas" />
+<variable nombre="clientes" />
+<variable nombre="rubro" />
+</xml>

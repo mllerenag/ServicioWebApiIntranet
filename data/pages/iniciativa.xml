@@ -1,0 +1,107 @@
+﻿<form title="Iniciativa" subtitle="Seleccionar Iniciativa">
+  <sql caption="Iniciativa">
+  SELECT [nid_iniciativa]
+      ,[no_codigo]
+      ,[no_nombre]
+      ,[tx_descripcion]
+  FROM [MST_INICIATIVA]
+    <column name="no_codigo" caption="C&amp;oacute;digo" />
+    <column name="nid_iniciativa" visible="0" />    
+    <column name="no_nombre" caption="Nombre" />
+    <column name="tx_descripcion" caption="Descripci&amp;oacute;n" />
+    <update>
+    update [MST_INICIATIVA] SET %%FIELDVALUE%% WHERE %%KEY%%
+    </update>
+    <insert>
+    insert into [MST_INICIATIVA] (%%FIELDS%%) values(%%VALUES%%)
+    </insert>
+    <delete>
+    delete from [MST_INICIATIVA] WHERE %%KEY%%
+    </delete>
+    <sql parentcols="nid_iniciativa" childcols="nid_iniciativa" caption="Portafolios" > 
+      SELECT [nid_relacion]
+          ,[TBL_PORTAFOLIO_INICIATIVA].[nid_portafolio]
+          ,[nid_iniciativa]
+          ,[no_codigo]
+          ,[no_nombre]
+          ,[nid_categoria]
+          ,[nid_prioridad]
+          ,[nid_responsable]
+          ,[nid_responsable2]
+          ,[tx_descripcion]
+          ,[fl_activo]
+          ,[no_usuario_red]
+          ,[no_estacion_red]
+          ,[fe_crea]
+          ,[nid_usuario_crea]
+          ,[fe_cambio]
+          ,[nid_usuario_cambio]
+          ,[co_estado]
+          FROM [TBL_PORTAFOLIO_INICIATIVA],[TBL_PORTAFOLIO]
+          WHERE [TBL_PORTAFOLIO_INICIATIVA].[nid_portafolio] = [TBL_PORTAFOLIO].[nid_portafolio]
+      <column name="nid_relacion" visible="0" primarykey="1" identity="1" />
+      <column name="nid_portafolio" caption="Portafolio" select="SELECT nid_portafolio,no_nombre FROM TBL_PORTAFOLIO"  />
+      <column name="no_codigo" caption="C&amp;oacute;digo" readonly="1" />
+      <column name="nid_iniciativa" visible="0" />
+      <column name="no_nombre" caption="Nombre" readonly="1" />
+      <column name="tx_descripcion" caption="Descripci&amp;oacute;n"  readonly="1" />      
+      <column name="fl_activo" caption="Activo" readonly="1" />
+      <column name="no_usuario_red" caption="Usuario de Red" readonly="1" />                      
+      <column name="no_estacion_red" caption="Estaci&amp;oacute;n de Red" readonly="1" />                            
+      <column name="co_estado" caption="Estado" readonly="1" />   
+      <column name="fe_crea" caption="Fecha Creaci&amp;oacute;n" readonly="1" />    
+      <column name="fe_cambio" caption="Fecha Cambio"  readonly="1" />                          
+      <column name="nid_categoria" caption="Categor&amp;iacute;a" readonly="1" select="SELECT nid_categoria,no_nombre FROM MST_CATEGORIA" />
+      <column name="nid_prioridad" caption="Prioridad" readonly="1" select="SELECT nid_prioridad,no_nombre FROM MST_PRIORIDAD" />
+      <column name="nid_responsable" caption="Responsable" readonly="1" select="SELECT nid_usuario,no_nombre FROM TBL_USUARIO" />    
+      <column name="nid_responsable2" caption="Responsable&amp;nbsp;2" readonly="1" select="SELECT nid_usuario,no_nombre FROM TBL_USUARIO" />        
+      <column name="nid_usuario_cambio" caption="Usuario Cambio" readonly="1" select="SELECT nid_usuario,no_nombre FROM TBL_USUARIO" />        
+      <column name="nid_usuario_crea" caption="Usuario Creaci&amp;oacute;n" readonly="1" select="SELECT nid_usuario,no_nombre FROM TBL_USUARIO" />  
+      <select caption="Agregar Portafolio" tablecols="nid_portafolio"  selectcols="nid_portafolio" > 
+      SELECT [nid_portafolio]
+          ,[no_codigo]
+          ,[no_nombre]
+          ,[nid_categoria]
+          ,[nid_prioridad]
+          ,[nid_responsable]
+          ,[nid_responsable2]
+          ,[tx_descripcion]
+          ,[fl_activo]
+          ,[no_usuario_red]
+          ,[no_estacion_red]
+          ,[fe_crea]
+          ,[nid_usuario_crea]
+          ,[fe_cambio]
+          ,[nid_usuario_cambio]
+          ,[co_estado]
+          FROM [TBL_PORTAFOLIO]
+      <column name="nid_portafolio"  visible="0" caption="Portafolio" />
+      <column name="no_codigo" caption="C&amp;oacute;digo" readonly="1" />
+      <column name="no_nombre" caption="Nombre" />
+      <column name="tx_descripcion" caption="Descripci&amp;oacute;n" />      
+      <column name="fl_activo" caption="Activo" />
+      <column name="no_usuario_red" caption="Usuario de Red"  />                      
+      <column name="no_estacion_red" caption="Estaci&amp;oacute;n de Red" />                            
+      <column name="co_estado" caption="Estado" />   
+      <column name="fe_crea" caption="Fecha Creaci&amp;oacute;n" />    
+      <column name="fe_cambio" caption="Fecha Cambio"  />                          
+      <column name="nid_categoria" caption="Categor&amp;iacute;a" select="SELECT nid_categoria,no_nombre FROM MST_CATEGORIA" />
+      <column name="nid_prioridad" caption="Prioridad" select="SELECT nid_prioridad,no_nombre FROM MST_PRIORIDAD" />
+      <column name="nid_responsable" caption="Responsable" select="SELECT nid_usuario,no_nombre FROM TBL_USUARIO" />    
+      <column name="nid_responsable2" caption="Responsable&amp;nbsp;2" select="SELECT nid_usuario,no_nombre FROM TBL_USUARIO" />        
+      <column name="nid_usuario_cambio" caption="Usuario Cambio" select="SELECT nid_usuario,no_nombre FROM TBL_USUARIO" />        
+      <column name="nid_usuario_crea" caption="Usuario Creaci&amp;oacute;n" select="SELECT nid_usuario,no_nombre FROM TBL_USUARIO" />  
+	  </select>
+      <update>
+      update [TBL_PORTAFOLIO_INICIATIVA] SET %%FIELDVALUE%% WHERE %%KEY%%
+      </update>
+      <insert>
+      insert into [TBL_PORTAFOLIO_INICIATIVA] (%%FIELDS%%) values(%%VALUES%%)
+      </insert>
+      <delete>
+      delete from [TBL_PORTAFOLIO_INICIATIVA] WHERE %%KEY%%
+      </delete>
+    </sql>
+  </sql>
+
+</form>

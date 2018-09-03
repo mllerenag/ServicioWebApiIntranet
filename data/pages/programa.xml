@@ -1,0 +1,89 @@
+﻿<form title="Programa" subtitle="Seleccionar Programa">
+  <sql caption="Programa" data-form="1" data-filter="1" >
+SELECT [nid_programa]
+      ,[no_codigo]
+      ,[no_nombre] 
+      ,[tx_descripcion] 
+      ,[fe_crea] 
+      ,[fe_inicio]
+      ,[fe_fin]      
+      ,[nid_responsable]
+      ,[nid_prioridad]
+      ,[fl_activo]
+  FROM [TBL_PROGRAMA]
+    <column name="no_codigo" caption="C&amp;oacute;digo" />
+    <column name="tx_descripcion" caption="Descripci&amp;oacute;n" />
+    <column name="fe_crea" caption="Fecha Creaci&amp;oacute;n" />    
+    <column name="fe_fin" caption="Fecha Fin" />    
+    <column name="no_nombre" caption="Nombre" />        
+    <column name="fe_inicio" caption="Fecha Inicio" />        
+    <column name="nid_programa" visible="0" identity="1" />    
+    <column name="nid_prioridad" caption="Prioridad" select="SELECT nid_prioridad,no_nombre FROM MST_PRIORIDAD" />
+    <column name="nid_responsable" caption="Responsable" select="SELECT nid_usuario,no_nombre FROM TBL_USUARIO" /> 
+    <column name="fl_activo" caption="Activo" />   
+    <update>
+    update [TBL_PROGRAMA] SET %%FIELDVALUE%% WHERE %%KEY%%
+    </update>
+    <insert>
+    insert into [TBL_PROGRAMA] (%%FIELDS%%) values(%%VALUES%%)
+    </insert>
+    <delete>
+    delete from [TBL_PROGRAMA] WHERE %%KEY%%
+    </delete>
+
+	<sql parentcols="nid_programa" childcols="nid_programa" caption="Proyecto" > 
+SELECT [nid_relacion]
+      ,[nid_programa]
+      ,[TBL_PROGRAMA_PROYECTO].[nid_proyecto]
+      ,[no_codigo]
+      ,[tx_descripcion]
+      ,[fe_crea]
+      ,[fe_fin]
+      ,[fe_inicio]
+      ,[nid_responsable]
+      ,[nid_prioridad]
+  FROM  [TBL_PROGRAMA_PROYECTO], [TBL_PROYECTO]
+  WHERE [TBL_PROYECTO].[nid_proyecto] = [TBL_PROGRAMA_PROYECTO].[nid_proyecto]
+      <column name="no_codigo" caption="C&amp;oacute;digo" readonly="1" />
+      <column name="tx_descripcion" caption="Descripci&amp;oacute;n"  readonly="1" />
+      <column name="nid_relacion" visible="0" primarykey="1" identity="1" />    
+      <column name="nid_programa" visible="0" />
+      <column name="nid_proyecto" caption="Proyecto" select="select nid_proyecto,no_nombre from TBL_PROYECTO"   />  
+      <column name="fe_crea" caption="Fecha Creaci&amp;oacute;n"  readonly="1" />    
+      <column name="fe_fin" caption="Fecha Fin" readonly="1" />    
+      <column name="fe_inicio" caption="Fecha Inicio"  readonly="1" />            
+      <column name="nid_responsable" caption="Responsable" select="SELECT nid_usuario,no_nombre FROM TBL_USUARIO"  readonly="1" />
+      <column name="nid_prioridad" caption="Prioridad" select="SELECT nid_prioridad,no_nombre FROM MST_PRIORIDAD"  readonly="1" />
+      <select caption="Agregar Proyectos" selectcols="nid_proyecto" tablecols="nid_proyecto" >
+SELECT [nid_proyecto] 
+      ,[no_codigo] 
+      ,[no_nombre] 
+      ,[tx_descripcion] 
+      ,[fe_crea] 
+      ,[fe_fin]
+      ,[fe_inicio]
+      ,[nid_responsable]
+      ,[nid_prioridad]
+  FROM  [TBL_PROYECTO]
+      <column name="no_codigo" caption="C&amp;oacute;digo" />
+      <column name="tx_descripcion" caption="Descripci&amp;oacute;n" />
+      <column name="nid_proyecto" caption="Id" width="15" />  
+      <column name="no_nombre" caption="Nombre" />        
+      <column name="fe_crea" caption="Fecha Creaci&amp;oacute;n" />    
+      <column name="fe_fin" caption="Fecha Fin" />    
+      <column name="fe_inicio" caption="Fecha Inicio" />           
+	  </select>
+      
+      <update>
+        update [TBL_PROGRAMA_PROYECTO] SET %%FIELDVALUE%% WHERE %%KEY%%
+      </update>
+      <insert>
+        insert into [TBL_PROGRAMA_PROYECTO] (%%FIELDS%%) values(%%VALUES%%)
+      </insert>
+      <delete>
+        delete from [TBL_PROGRAMA_PROYECTO] WHERE %%KEY%%
+      </delete>
+	</sql>
+  </sql>
+
+</form>

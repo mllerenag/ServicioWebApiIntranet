@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="Database" Label="db.sdf" Category="Database" Group="Expanded" />
+    <Node Id="MST_CATEGORIA" Label="MST_CATEGORIA" Category="Table" Group="Collapsed" />
+    <Node Id="MST_CATEGORIA_nid_categoria" Label="nid_categoria" Category="Field Primary" Description="int" />
+    <Node Id="MST_CATEGORIA_no_nombre" Label="no_nombre" Category="Field Optional" Description="nvarchar(100)" />
+    <Node Id="MST_INICIATIVA" Label="MST_INICIATIVA" Category="Table" Group="Collapsed" />
+    <Node Id="MST_INICIATIVA_nid_iniciativa" Label="nid_iniciativa" Category="Field Primary" Description="int" />
+    <Node Id="MST_INICIATIVA_no_nombre" Label="no_nombre" Category="Field Optional" Description="nvarchar(100)" />
+    <Node Id="MST_INICIATIVA_tx_descripcion" Label="tx_descripcion" Category="Field Optional" Description="nvarchar(4000)" />
+    <Node Id="MST_INICIATIVA_no_codigo" Label="no_codigo" Category="Field Optional" Description="nvarchar(6)" />
+    <Node Id="MST_PRIORIDAD" Label="MST_PRIORIDAD" Category="Table" Group="Collapsed" />
+    <Node Id="MST_PRIORIDAD_nid_prioridad" Label="nid_prioridad" Category="Field Primary" Description="int" />
+    <Node Id="MST_PRIORIDAD_no_nombre" Label="no_nombre" Category="Field Optional" Description="nvarchar(100)" />
+    <Node Id="MST_RECURSO" Label="MST_RECURSO" Category="Table" Group="Collapsed" />
+    <Node Id="MST_RECURSO_nid_recurso" Label="nid_recurso" Category="Field Primary" Description="int" />
+    <Node Id="MST_RECURSO_co_tipo" Label="co_tipo" Category="Field Optional" Description="nvarchar(3)" />
+    <Node Id="MST_RECURSO_no_nombre" Label="no_nombre" Category="Field Optional" Description="nvarchar(100)" />
+    <Node Id="TBL_BALANCEO" Label="TBL_BALANCEO" Category="Table" Group="Collapsed" />
+    <Node Id="TBL_BALANCEO_nid_balanceo" Label="nid_balanceo" Category="Field Primary" Description="int" />
+    <Node Id="TBL_BALANCEO_co_estado" Label="co_estado" Category="Field Optional" Description="nvarchar(3)" />
+    <Node Id="TBL_COMPONENTE" Label="TBL_COMPONENTE" Category="Table" Group="Collapsed" />
+    <Node Id="TBL_COMPONENTE_nid_componente" Label="nid_componente" Category="Field Primary" Description="int" />
+    <Node Id="TBL_COMPONENTE_nid_portafolio" Label="nid_portafolio" Category="Field Foreign" Description="int" />
+    <Node Id="TBL_COMPONENTE_nid_programa" Label="nid_programa" Category="Field Foreign" Description="int" />
+    <Node Id="TBL_COMPONENTE_nid_proyecto" Label="nid_proyecto" Category="Field Foreign" Description="int" />
+    <Node Id="TBL_COMPONENTE_fl_activo" Label="fl_activo" Category="Field" Description="bit" />
+    <Node Id="TBL_COMPONENTE_RECURSO" Label="TBL_COMPONENTE_RECURSO" Category="Table" Group="Collapsed" />
+    <Node Id="TBL_COMPONENTE_RECURSO_nid_relacion" Label="nid_relacion" Category="Field Primary" Description="int" />
+    <Node Id="TBL_COMPONENTE_RECURSO_nid_componente" Label="nid_componente" Category="Field Foreign" Description="int" />
+    <Node Id="TBL_COMPONENTE_RECURSO_nid_recurso" Label="nid_recurso" Category="Field Foreign" Description="int" />
+    <Node Id="TBL_COMPONENTE_RECURSO_nu_recursototal" Label="nu_recursototal" Category="Field" Description="int" />
+    <Node Id="TBL_DETALLE_BALANCEO" Label="TBL_DETALLE_BALANCEO" Category="Table" Group="Collapsed" />
+    <Node Id="TBL_DETALLE_BALANCEO_nid_detalle" Label="nid_detalle" Category="Field Primary" Description="int" />
+    <Node Id="TBL_DETALLE_BALANCEO_nid_solicitud" Label="nid_solicitud" Category="Field Foreign" Description="int" />
+    <Node Id="TBL_DETALLE_BALANCEO_nid_balanceo" Label="nid_balanceo" Category="Field Foreign" Description="int" />
+    <Node Id="TBL_DETALLE_BALANCEO_no_balanceo" Label="no_balanceo" Category="Field" Description="int" />
+    <Node Id="TBL_PORTAFOLIO" Label="TBL_PORTAFOLIO" Category="Table" Group="Collapsed" />
+    <Node Id="TBL_PORTAFOLIO_nid_portafolio" Label="nid_portafolio" Category="Field Primary" Description="int" />
+    <Node Id="TBL_PORTAFOLIO_no_codigo" Label="no_codigo" Category="Field Optional" Description="nvarchar(6)" />
+    <Node Id="TBL_PORTAFOLIO_no_nombre" Label="no_nombre" Category="Field Optional" Description="nvarchar(100)" />
+    <Node Id="TBL_PORTAFOLIO_nid_categoria" Label="nid_categoria" Category="Field Foreign" Description="int" />
+    <Node Id="TBL_PORTAFOLIO_nid_prioridad" Label="nid_prioridad" Category="Field Foreign" Description="int" />
+    <Node Id="TBL_PORTAFOLIO_nid_responsable" Label="nid_responsable" Category="Field Foreign" Description="int" />
+    <Node Id="TBL_PORTAFOLIO_nid_responsable2" Label="nid_responsable2" Category="Field Foreign" Description="int" />
+    <Node Id="TBL_PORTAFOLIO_tx_descripcion" Label="tx_descripcion" Category="Field Optional" Description="nvarchar(4000)" />
+    <Node Id="TBL_PORTAFOLIO_fl_activo" Label="fl_activo" Category="Field" Description="bit" />
+    <Node Id="TBL_PORTAFOLIO_no_usuario_red" Label="no_usuario_red" Category="Field Optional" Description="nvarchar(100)" />
+    <Node Id="TBL_PORTAFOLIO_no_estacion_red" Label="no_estacion_red" Category="Field Optional" Description="nvarchar(100)" />
+    <Node Id="TBL_PORTAFOLIO_fe_crea" Label="fe_crea" Category="Field Optional" Description="datetime" />
+    <Node Id="TBL_PORTAFOLIO_nid_usuario_crea" Label="nid_usuario_crea" Category="Field Optional" Description="int" />
+    <Node Id="TBL_PORTAFOLIO_fe_cambio" Label="fe_cambio" Category="Field Optional" Description="datetime" />
+    <Node Id="TBL_PORTAFOLIO_nid_usuario_cambio" Label="nid_usuario_cambio" Category="Field Optional" Description="int" />
+    <Node Id="TBL_PORTAFOLIO_co_estado" Label="co_estado" Category="Field Optional" Description="nvarchar(3)" />
+    <Node Id="TBL_PORTAFOLIO_INICIATIVA" Label="TBL_PORTAFOLIO_INICIATIVA" Category="Table" Group="Collapsed" />
+    <Node Id="TBL_PORTAFOLIO_INICIATIVA_nid_relacion" Label="nid_relacion" Category="Field Primary" Description="int" />
+    <Node Id="TBL_PORTAFOLIO_INICIATIVA_nid_portafolio" Label="nid_portafolio" Category="Field Foreign" Description="int" />
+    <Node Id="TBL_PORTAFOLIO_INICIATIVA_nid_iniciativa" Label="nid_iniciativa" Category="Field Foreign" Description="int" />
+    <Node Id="TBL_PORTAFOLIO_RECURSO" Label="TBL_PORTAFOLIO_RECURSO" Category="Table" Group="Collapsed" />
+    <Node Id="TBL_PORTAFOLIO_RECURSO_nid_relacion" Label="nid_relacion" Category="Field Primary" Description="int" />
+    <Node Id="TBL_PORTAFOLIO_RECURSO_nid_portafolio" Label="nid_portafolio" Category="Field Foreign" Description="int" />
+    <Node Id="TBL_PORTAFOLIO_RECURSO_nid_recurso" Label="nid_recurso" Category="Field Foreign" Description="int" />
+    <Node Id="TBL_PORTAFOLIO_RECURSO_nu_recursototal" Label="nu_recursototal" Category="Field" Description="int" />
+    <Node Id="TBL_PORTAFOLIO_RECURSO_nu_recursodisponible" Label="nu_recursodisponible" Category="Field" Description="int" />
+    <Node Id="TBL_PORTAFOLIO_RECURSO_nu_recursoconsumido" Label="nu_recursoconsumido" Category="Field" Description="int" />
+    <Node Id="TBL_PROGRAMA" Label="TBL_PROGRAMA" Category="Table" Group="Collapsed" />
+    <Node Id="TBL_PROGRAMA_nid_programa" Label="nid_programa" Category="Field Primary" Description="int" />
+    <Node Id="TBL_PROGRAMA_no_codigo" Label="no_codigo" Category="Field Optional" Description="nvarchar(6)" />
+    <Node Id="TBL_PROGRAMA_no_nombre" Label="no_nombre" Category="Field Optional" Description="nvarchar(100)" />
+    <Node Id="TBL_PROGRAMA_tx_descripcion" Label="tx_descripcion" Category="Field Optional" Description="nvarchar(4000)" />
+    <Node Id="TBL_PROGRAMA_fe_crea" Label="fe_crea" Category="Field" Description="datetime" />
+    <Node Id="TBL_PROGRAMA_fe_fin" Label="fe_fin" Category="Field" Description="datetime" />
+    <Node Id="TBL_PROGRAMA_fe_inicio" Label="fe_inicio" Category="Field Optional" Description="datetime" />
+    <Node Id="TBL_PROGRAMA_nid_responsable" Label="nid_responsable" Category="Field Optional" Description="int" />
+    <Node Id="TBL_PROGRAMA_nid_prioridad" Label="nid_prioridad" Category="Field Optional" Description="int" />
+    <Node Id="TBL_PROGRAMA_PROYECTO" Label="TBL_PROGRAMA_PROYECTO" Category="Table" Group="Collapsed" />
+    <Node Id="TBL_PROGRAMA_PROYECTO_nid_relacion" Label="nid_relacion" Category="Field Primary" Description="int" />
+    <Node Id="TBL_PROGRAMA_PROYECTO_nid_programa" Label="nid_programa" Category="Field Foreign" Description="int" />
+    <Node Id="TBL_PROGRAMA_PROYECTO_nid_proyecto" Label="nid_proyecto" Category="Field Foreign" Description="int" />
+    <Node Id="TBL_PROYECTO" Label="TBL_PROYECTO" Category="Table" Group="Collapsed" />
+    <Node Id="TBL_PROYECTO_nid_proyecto" Label="nid_proyecto" Category="Field Primary" Description="int" />
+    <Node Id="TBL_PROYECTO_no_codigo" Label="no_codigo" Category="Field Optional" Description="nvarchar(6)" />
+    <Node Id="TBL_PROYECTO_no_nombre" Label="no_nombre" Category="Field Optional" Description="nvarchar(100)" />
+    <Node Id="TBL_PROYECTO_tx_descripcion" Label="tx_descripcion" Category="Field Optional" Description="nvarchar(4000)" />
+    <Node Id="TBL_PROYECTO_fe_crea" Label="fe_crea" Category="Field" Description="datetime" />
+    <Node Id="TBL_PROYECTO_fe_fin" Label="fe_fin" Category="Field" Description="datetime" />
+    <Node Id="TBL_PROYECTO_fe_inicio" Label="fe_inicio" Category="Field Optional" Description="datetime" />
+    <Node Id="TBL_PROYECTO_nid_responsable" Label="nid_responsable" Category="Field Optional" Description="int" />
+    <Node Id="TBL_PROYECTO_nid_prioridad" Label="nid_prioridad" Category="Field Optional" Description="int" />
+    <Node Id="TBL_SOLICITUD" Label="TBL_SOLICITUD" Category="Table" Group="Collapsed" />
+    <Node Id="TBL_SOLICITUD_nid_solicitud" Label="nid_solicitud" Category="Field Primary" Description="int" />
+    <Node Id="TBL_SOLICITUD_no_nombre" Label="no_nombre" Category="Field Optional" Description="nvarchar(100)" />
+    <Node Id="TBL_SOLICITUD_nid_componente" Label="nid_componente" Category="Field Foreign" Description="int" />
+    <Node Id="TBL_SOLICITUD_nid_recurso" Label="nid_recurso" Category="Field Foreign" Description="int" />
+    <Node Id="TBL_SOLICITUD_nu_solicitado" Label="nu_solicitado" Category="Field" Description="int" />
+    <Node Id="TBL_SOLICITUD_fe_solicitud" Label="fe_solicitud" Category="Field Optional" Description="datetime" />
+    <Node Id="TBL_SOLICITUD_co_solicitud" Label="co_solicitud" Category="Field Optional" Description="nvarchar(6)" />
+    <Node Id="TBL_USUARIO" Label="TBL_USUARIO" Category="Table" Group="Collapsed" />
+    <Node Id="TBL_USUARIO_nid_usuario" Label="nid_usuario" Category="Field Primary" Description="int" />
+    <Node Id="TBL_USUARIO_nid_perfil" Label="nid_perfil" Category="Field" Description="int" />
+    <Node Id="TBL_USUARIO_no_nombre" Label="no_nombre" Category="Field" Description="nvarchar(100)" />
+    <Node Id="TBL_USUARIO_no_apepat" Label="no_apepat" Category="Field" Description="nvarchar(100)" />
+    <Node Id="TBL_USUARIO_no_apemat" Label="no_apemat" Category="Field" Description="nvarchar(100)" />
+    <Node Id="TBL_USUARIO_no_imagen" Label="no_imagen" Category="Field" Description="nvarchar(100)" />
+    <Node Id="TBL_USUARIO_no_usrlogin" Label="no_usrlogin" Category="Field" Description="nvarchar(30)" />
+    <Node Id="TBL_USUARIO_no_password" Label="no_password" Category="Field" Description="nvarchar(30)" />
+    <Node Id="TBL_USUARIO_no_correo" Label="no_correo" Category="Field" Description="nvarchar(100)" />
+    <Node Id="TBL_USUARIO_fl_activo" Label="fl_activo" Category="Field" Description="bit" />
+  </Nodes>
+  <Links>
+    <Link Source="Database" Target="MST_CATEGORIA" Category="Contains" />
+    <Link Source="MST_CATEGORIA" Target="MST_CATEGORIA_nid_categoria" Category="Contains" />
+    <Link Source="MST_CATEGORIA" Target="MST_CATEGORIA_no_nombre" Category="Contains" />
+    <Link Source="Database" Target="MST_INICIATIVA" Category="Contains" />
+    <Link Source="MST_INICIATIVA" Target="MST_INICIATIVA_nid_iniciativa" Category="Contains" />
+    <Link Source="MST_INICIATIVA" Target="MST_INICIATIVA_no_nombre" Category="Contains" />
+    <Link Source="MST_INICIATIVA" Target="MST_INICIATIVA_tx_descripcion" Category="Contains" />
+    <Link Source="MST_INICIATIVA" Target="MST_INICIATIVA_no_codigo" Category="Contains" />
+    <Link Source="Database" Target="MST_PRIORIDAD" Category="Contains" />
+    <Link Source="MST_PRIORIDAD" Target="MST_PRIORIDAD_nid_prioridad" Category="Contains" />
+    <Link Source="MST_PRIORIDAD" Target="MST_PRIORIDAD_no_nombre" Category="Contains" />
+    <Link Source="Database" Target="MST_RECURSO" Category="Contains" />
+    <Link Source="MST_RECURSO" Target="MST_RECURSO_nid_recurso" Category="Contains" />
+    <Link Source="MST_RECURSO" Target="MST_RECURSO_co_tipo" Category="Contains" />
+    <Link Source="MST_RECURSO" Target="MST_RECURSO_no_nombre" Category="Contains" />
+    <Link Source="Database" Target="TBL_BALANCEO" Category="Contains" />
+    <Link Source="TBL_BALANCEO" Target="TBL_BALANCEO_nid_balanceo" Category="Contains" />
+    <Link Source="TBL_BALANCEO" Target="TBL_BALANCEO_co_estado" Category="Contains" />
+    <Link Source="Database" Target="TBL_COMPONENTE" Category="Contains" />
+    <Link Source="TBL_COMPONENTE" Target="TBL_COMPONENTE_nid_componente" Category="Contains" />
+    <Link Source="TBL_COMPONENTE" Target="TBL_COMPONENTE_nid_portafolio" Category="Contains" />
+    <Link Source="TBL_COMPONENTE" Target="TBL_COMPONENTE_nid_programa" Category="Contains" />
+    <Link Source="TBL_COMPONENTE" Target="TBL_COMPONENTE_nid_proyecto" Category="Contains" />
+    <Link Source="TBL_COMPONENTE" Target="TBL_COMPONENTE_fl_activo" Category="Contains" />
+    <Link Source="TBL_COMPONENTE_nid_portafolio" Target="TBL_PORTAFOLIO_nid_portafolio" Label="FK__TBL_COMPONENTE__000000000000015E" Category="Foreign Key" />
+    <Link Source="TBL_COMPONENTE_nid_programa" Target="TBL_PROGRAMA_nid_programa" Label="FK__TBL_COMPONENTE__0000000000000162" Category="Foreign Key" />
+    <Link Source="TBL_COMPONENTE_nid_proyecto" Target="TBL_PROYECTO_nid_proyecto" Label="FK__TBL_COMPONENTE__0000000000000166" Category="Foreign Key" />
+    <Link Source="Database" Target="TBL_COMPONENTE_RECURSO" Category="Contains" />
+    <Link Source="TBL_COMPONENTE_RECURSO" Target="TBL_COMPONENTE_RECURSO_nid_relacion" Category="Contains" />
+    <Link Source="TBL_COMPONENTE_RECURSO" Target="TBL_COMPONENTE_RECURSO_nid_componente" Category="Contains" />
+    <Link Source="TBL_COMPONENTE_RECURSO" Target="TBL_COMPONENTE_RECURSO_nid_recurso" Category="Contains" />
+    <Link Source="TBL_COMPONENTE_RECURSO" Target="TBL_COMPONENTE_RECURSO_nu_recursototal" Category="Contains" />
+    <Link Source="TBL_COMPONENTE_RECURSO_nid_componente" Target="TBL_COMPONENTE_nid_componente" Label="FK__TBL_COMPONENTE_RECURSO__0000000000000178" Category="Foreign Key" />
+    <Link Source="TBL_COMPONENTE_RECURSO_nid_recurso" Target="MST_RECURSO_nid_recurso" Label="FK__TBL_COMPONENTE_RECURSO__000000000000017C" Category="Foreign Key" />
+    <Link Source="Database" Target="TBL_DETALLE_BALANCEO" Category="Contains" />
+    <Link Source="TBL_DETALLE_BALANCEO" Target="TBL_DETALLE_BALANCEO_nid_detalle" Category="Contains" />
+    <Link Source="TBL_DETALLE_BALANCEO" Target="TBL_DETALLE_BALANCEO_nid_solicitud" Category="Contains" />
+    <Link Source="TBL_DETALLE_BALANCEO" Target="TBL_DETALLE_BALANCEO_nid_balanceo" Category="Contains" />
+    <Link Source="TBL_DETALLE_BALANCEO" Target="TBL_DETALLE_BALANCEO_no_balanceo" Category="Contains" />
+    <Link Source="TBL_DETALLE_BALANCEO_nid_balanceo" Target="TBL_BALANCEO_nid_balanceo" Label="FK__TBL_DETALLE_BALANCEO__00000000000001EF" Category="Foreign Key" />
+    <Link Source="TBL_DETALLE_BALANCEO_nid_solicitud" Target="TBL_SOLICITUD_nid_solicitud" Label="FK__TBL_DETALLE_BALANCEO__00000000000001F3" Category="Foreign Key" />
+    <Link Source="Database" Target="TBL_PORTAFOLIO" Category="Contains" />
+    <Link Source="TBL_PORTAFOLIO" Target="TBL_PORTAFOLIO_nid_portafolio" Category="Contains" />
+    <Link Source="TBL_PORTAFOLIO" Target="TBL_PORTAFOLIO_no_codigo" Category="Contains" />
+    <Link Source="TBL_PORTAFOLIO" Target="TBL_PORTAFOLIO_no_nombre" Category="Contains" />
+    <Link Source="TBL_PORTAFOLIO" Target="TBL_PORTAFOLIO_nid_categoria" Category="Contains" />
+    <Link Source="TBL_PORTAFOLIO" Target="TBL_PORTAFOLIO_nid_prioridad" Category="Contains" />
+    <Link Source="TBL_PORTAFOLIO" Target="TBL_PORTAFOLIO_nid_responsable" Category="Contains" />
+    <Link Source="TBL_PORTAFOLIO" Target="TBL_PORTAFOLIO_nid_responsable2" Category="Contains" />
+    <Link Source="TBL_PORTAFOLIO" Target="TBL_PORTAFOLIO_tx_descripcion" Category="Contains" />
+    <Link Source="TBL_PORTAFOLIO" Target="TBL_PORTAFOLIO_fl_activo" Category="Contains" />
+    <Link Source="TBL_PORTAFOLIO" Target="TBL_PORTAFOLIO_no_usuario_red" Category="Contains" />
+    <Link Source="TBL_PORTAFOLIO" Target="TBL_PORTAFOLIO_no_estacion_red" Category="Contains" />
+    <Link Source="TBL_PORTAFOLIO" Target="TBL_PORTAFOLIO_fe_crea" Category="Contains" />
+    <Link Source="TBL_PORTAFOLIO" Target="TBL_PORTAFOLIO_nid_usuario_crea" Category="Contains" />
+    <Link Source="TBL_PORTAFOLIO" Target="TBL_PORTAFOLIO_fe_cambio" Category="Contains" />
+    <Link Source="TBL_PORTAFOLIO" Target="TBL_PORTAFOLIO_nid_usuario_cambio" Category="Contains" />
+    <Link Source="TBL_PORTAFOLIO" Target="TBL_PORTAFOLIO_co_estado" Category="Contains" />
+    <Link Source="TBL_PORTAFOLIO_nid_categoria" Target="MST_CATEGORIA_nid_categoria" Label="FK__TBL_PORTAFOLIO__000000000000013B" Category="Foreign Key" />
+    <Link Source="TBL_PORTAFOLIO_nid_prioridad" Target="MST_PRIORIDAD_nid_prioridad" Label="FK__TBL_PORTAFOLIO__000000000000013F" Category="Foreign Key" />
+    <Link Source="TBL_PORTAFOLIO_nid_responsable" Target="TBL_USUARIO_nid_usuario" Label="FK__TBL_PORTAFOLIO__0000000000000143" Category="Foreign Key" />
+    <Link Source="TBL_PORTAFOLIO_nid_responsable2" Target="TBL_USUARIO_nid_usuario" Label="FK__TBL_PORTAFOLIO__0000000000000147" Category="Foreign Key" />
+    <Link Source="Database" Target="TBL_PORTAFOLIO_INICIATIVA" Category="Contains" />
+    <Link Source="TBL_PORTAFOLIO_INICIATIVA" Target="TBL_PORTAFOLIO_INICIATIVA_nid_relacion" Category="Contains" />
+    <Link Source="TBL_PORTAFOLIO_INICIATIVA" Target="TBL_PORTAFOLIO_INICIATIVA_nid_portafolio" Category="Contains" />
+    <Link Source="TBL_PORTAFOLIO_INICIATIVA" Target="TBL_PORTAFOLIO_INICIATIVA_nid_iniciativa" Category="Contains" />
+    <Link Source="TBL_PORTAFOLIO_INICIATIVA_nid_iniciativa" Target="MST_INICIATIVA_nid_iniciativa" Label="FK__TBL_PORTAFOLIO_INICIATIVA__000000000000018C" Category="Foreign Key" />
+    <Link Source="TBL_PORTAFOLIO_INICIATIVA_nid_portafolio" Target="TBL_PORTAFOLIO_nid_portafolio" Label="FK__TBL_PORTAFOLIO_INICIATIVA__0000000000000190" Category="Foreign Key" />
+    <Link Source="Database" Target="TBL_PORTAFOLIO_RECURSO" Category="Contains" />
+    <Link Source="TBL_PORTAFOLIO_RECURSO" Target="TBL_PORTAFOLIO_RECURSO_nid_relacion" Category="Contains" />
+    <Link Source="TBL_PORTAFOLIO_RECURSO" Target="TBL_PORTAFOLIO_RECURSO_nid_portafolio" Category="Contains" />
+    <Link Source="TBL_PORTAFOLIO_RECURSO" Target="TBL_PORTAFOLIO_RECURSO_nid_recurso" Category="Contains" />
+    <Link Source="TBL_PORTAFOLIO_RECURSO" Target="TBL_PORTAFOLIO_RECURSO_nu_recursototal" Category="Contains" />
+    <Link Source="TBL_PORTAFOLIO_RECURSO" Target="TBL_PORTAFOLIO_RECURSO_nu_recursodisponible" Category="Contains" />
+    <Link Source="TBL_PORTAFOLIO_RECURSO" Target="TBL_PORTAFOLIO_RECURSO_nu_recursoconsumido" Category="Contains" />
+    <Link Source="TBL_PORTAFOLIO_RECURSO_nid_portafolio" Target="TBL_PORTAFOLIO_nid_portafolio" Label="FK__TBL_PORTAFOLIO_RECURSO__00000000000001A6" Category="Foreign Key" />
+    <Link Source="TBL_PORTAFOLIO_RECURSO_nid_recurso" Target="MST_RECURSO_nid_recurso" Label="FK__TBL_PORTAFOLIO_RECURSO__00000000000001AA" Category="Foreign Key" />
+    <Link Source="Database" Target="TBL_PROGRAMA" Category="Contains" />
+    <Link Source="TBL_PROGRAMA" Target="TBL_PROGRAMA_nid_programa" Category="Contains" />
+    <Link Source="TBL_PROGRAMA" Target="TBL_PROGRAMA_no_codigo" Category="Contains" />
+    <Link Source="TBL_PROGRAMA" Target="TBL_PROGRAMA_no_nombre" Category="Contains" />
+    <Link Source="TBL_PROGRAMA" Target="TBL_PROGRAMA_tx_descripcion" Category="Contains" />
+    <Link Source="TBL_PROGRAMA" Target="TBL_PROGRAMA_fe_crea" Category="Contains" />
+    <Link Source="TBL_PROGRAMA" Target="TBL_PROGRAMA_fe_fin" Category="Contains" />
+    <Link Source="TBL_PROGRAMA" Target="TBL_PROGRAMA_fe_inicio" Category="Contains" />
+    <Link Source="TBL_PROGRAMA" Target="TBL_PROGRAMA_nid_responsable" Category="Contains" />
+    <Link Source="TBL_PROGRAMA" Target="TBL_PROGRAMA_nid_prioridad" Category="Contains" />
+    <Link Source="Database" Target="TBL_PROGRAMA_PROYECTO" Category="Contains" />
+    <Link Source="TBL_PROGRAMA_PROYECTO" Target="TBL_PROGRAMA_PROYECTO_nid_relacion" Category="Contains" />
+    <Link Source="TBL_PROGRAMA_PROYECTO" Target="TBL_PROGRAMA_PROYECTO_nid_programa" Category="Contains" />
+    <Link Source="TBL_PROGRAMA_PROYECTO" Target="TBL_PROGRAMA_PROYECTO_nid_proyecto" Category="Contains" />
+    <Link Source="TBL_PROGRAMA_PROYECTO_nid_programa" Target="TBL_PROGRAMA_nid_programa" Label="FK__TBL_PROGRAMA_PROYECTO__00000000000001BA" Category="Foreign Key" />
+    <Link Source="TBL_PROGRAMA_PROYECTO_nid_proyecto" Target="TBL_PROYECTO_nid_proyecto" Label="FK__TBL_PROGRAMA_PROYECTO__00000000000001BE" Category="Foreign Key" />
+    <Link Source="Database" Target="TBL_PROYECTO" Category="Contains" />
+    <Link Source="TBL_PROYECTO" Target="TBL_PROYECTO_nid_proyecto" Category="Contains" />
+    <Link Source="TBL_PROYECTO" Target="TBL_PROYECTO_no_codigo" Category="Contains" />
+    <Link Source="TBL_PROYECTO" Target="TBL_PROYECTO_no_nombre" Category="Contains" />
+    <Link Source="TBL_PROYECTO" Target="TBL_PROYECTO_tx_descripcion" Category="Contains" />
+    <Link Source="TBL_PROYECTO" Target="TBL_PROYECTO_fe_crea" Category="Contains" />
+    <Link Source="TBL_PROYECTO" Target="TBL_PROYECTO_fe_fin" Category="Contains" />
+    <Link Source="TBL_PROYECTO" Target="TBL_PROYECTO_fe_inicio" Category="Contains" />
+    <Link Source="TBL_PROYECTO" Target="TBL_PROYECTO_nid_responsable" Category="Contains" />
+    <Link Source="TBL_PROYECTO" Target="TBL_PROYECTO_nid_prioridad" Category="Contains" />
+    <Link Source="Database" Target="TBL_SOLICITUD" Category="Contains" />
+    <Link Source="TBL_SOLICITUD" Target="TBL_SOLICITUD_nid_solicitud" Category="Contains" />
+    <Link Source="TBL_SOLICITUD" Target="TBL_SOLICITUD_no_nombre" Category="Contains" />
+    <Link Source="TBL_SOLICITUD" Target="TBL_SOLICITUD_nid_componente" Category="Contains" />
+    <Link Source="TBL_SOLICITUD" Target="TBL_SOLICITUD_nid_recurso" Category="Contains" />
+    <Link Source="TBL_SOLICITUD" Target="TBL_SOLICITUD_nu_solicitado" Category="Contains" />
+    <Link Source="TBL_SOLICITUD" Target="TBL_SOLICITUD_fe_solicitud" Category="Contains" />
+    <Link Source="TBL_SOLICITUD" Target="TBL_SOLICITUD_co_solicitud" Category="Contains" />
+    <Link Source="TBL_SOLICITUD_nid_componente" Target="TBL_COMPONENTE_nid_componente" Label="FK__TBL_SOLICITUD__00000000000001D9" Category="Foreign Key" />
+    <Link Source="TBL_SOLICITUD_nid_recurso" Target="MST_RECURSO_nid_recurso" Label="FK__TBL_SOLICITUD__00000000000001DD" Category="Foreign Key" />
+    <Link Source="Database" Target="TBL_USUARIO" Category="Contains" />
+    <Link Source="TBL_USUARIO" Target="TBL_USUARIO_nid_usuario" Category="Contains" />
+    <Link Source="TBL_USUARIO" Target="TBL_USUARIO_nid_perfil" Category="Contains" />
+    <Link Source="TBL_USUARIO" Target="TBL_USUARIO_no_nombre" Category="Contains" />
+    <Link Source="TBL_USUARIO" Target="TBL_USUARIO_no_apepat" Category="Contains" />
+    <Link Source="TBL_USUARIO" Target="TBL_USUARIO_no_apemat" Category="Contains" />
+    <Link Source="TBL_USUARIO" Target="TBL_USUARIO_no_imagen" Category="Contains" />
+    <Link Source="TBL_USUARIO" Target="TBL_USUARIO_no_usrlogin" Category="Contains" />
+    <Link Source="TBL_USUARIO" Target="TBL_USUARIO_no_password" Category="Contains" />
+    <Link Source="TBL_USUARIO" Target="TBL_USUARIO_no_correo" Category="Contains" />
+    <Link Source="TBL_USUARIO" Target="TBL_USUARIO_fl_activo" Category="Contains" />
+  </Links>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Table" ValueLabel="True">
+      <Condition Expression="HasCategory('Table')" />
+      <Setter Property="Background" Value="#FFC0C0C0" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Schema" ValueLabel="True">
+      <Condition Expression="HasCategory('Schema')" />
+      <Setter Property="Background" Value="#FF7F9169" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Primary" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Primary')" />
+      <Setter Property="Background" Value="#FF008000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Optional" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Optional')" />
+      <Setter Property="Background" Value="#FF808040" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Foreign" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Foreign')" />
+      <Setter Property="Background" Value="#FF8080FF" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field" ValueLabel="True">
+      <Condition Expression="HasCategory('Field')" />
+      <Setter Property="Background" Value="#FFC0A000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Database" ValueLabel="True">
+      <Condition Expression="HasCategory('Database')" />
+      <Setter Property="Background" Value="#FFFFFFFF" />
+    </Style>
+  </Styles>
+</DirectedGraph>
