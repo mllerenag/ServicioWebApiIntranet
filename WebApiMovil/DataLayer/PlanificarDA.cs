@@ -78,7 +78,7 @@ namespace WebApiMovil.DataLayer
                     using (SqlCommand command = new SqlCommand("[pa_sps_proyecto_monitoreo]", conection))
                     {
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.AddWithValue("@nid_responsable", entidad.nid_responsable);
+                        command.Parameters.AddWithValue("@vi_nid_responsable", entidad.nid_responsable);
                         command.Parameters.AddWithValue("@vi_portafolio", entidad.co_portafolio);
                         command.Parameters.AddWithValue("@vi_proyecto", entidad.co_proyecto);
                         command.Parameters.AddWithValue("@vi_categoria", entidad.categoria);
@@ -98,7 +98,7 @@ namespace WebApiMovil.DataLayer
                                     tmp.nid_portafolio = dr.GetInt32(dr.GetOrdinal("nid_portafolio"));
                                     tmp.no_portafolio = dr.GetString(dr.GetOrdinal("no_portafolio"));
 
-                                    tmp.fecha_crea = dr.GetString(dr.GetOrdinal("fe_crea"));
+                                    tmp.fecha_crea = dr.GetString(dr.GetOrdinal("fecha_crea"));
                                     tmp.po_programado = dr.GetInt32(dr.GetOrdinal("po_programado"));
                                     tmp.po_real = dr.GetInt32(dr.GetOrdinal("po_real"));
                                     tmp.no_estado = dr.GetString(dr.GetOrdinal("no_estado"));
@@ -404,6 +404,58 @@ namespace WebApiMovil.DataLayer
                 throw (ex);
             }
         }
+
+        public List<ProyectosPortafolio_Response> BuscarProyectosPortafolio(ProyectosPortafolio_Request entidad)
+        {
+            List<ProyectosPortafolio_Response> retorno = null;
+            ProyectosPortafolio_Response tmp = null;
+            try
+            {
+                using (SqlConnection conection = new SqlConnection(ConfigurationManager.ConnectionStrings["cnxIndra"].ConnectionString))
+                {
+                    conection.Open();
+
+                    using (SqlCommand command = new SqlCommand("[pa_sps_proyectosportafolio]", conection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@vi_nid_responsable", entidad.nid_responsable);
+                        command.Parameters.AddWithValue("@vi_nombre", entidad.nombre);
+
+                        using (SqlDataReader dr = command.ExecuteReader())
+                        {
+                            retorno = new List<ProyectosPortafolio_Response>();
+                            if (dr.HasRows)
+                            {
+                                while (dr.Read())
+                                {
+                                    tmp = new ProyectosPortafolio_Response();
+                                    tmp.nid_portafolio = dr.GetInt32(dr.GetOrdinal("nid_portafolio"));
+                                    tmp.co_portafolio = dr.GetString(dr.GetOrdinal("co_portafolio"));
+                                    tmp.no_portafolio = dr.GetString(dr.GetOrdinal("no_portafolio"));
+                                    tmp.nid_proyecto = dr.GetInt32(dr.GetOrdinal("nid_proyecto"));
+                                    tmp.co_proyecto = dr.GetString(dr.GetOrdinal("co_proyecto"));
+                                    tmp.no_proyecto = dr.GetString(dr.GetOrdinal("no_proyecto"));
+
+                                    retorno.Add(tmp);
+                                }
+                            }
+                            else
+                            {
+                                retorno = new List<ProyectosPortafolio_Response>();
+                            }
+                        }
+
+                    }
+                    conection.Close();
+                }
+                return retorno;
+            }
+            catch (Exception ex)
+            {
+                throw (ex);
+            }
+        }
+
 
     }
 }

@@ -11,10 +11,10 @@ namespace WebApiMovil.Controllers
 {
     public class PlanificarController : System.Web.Http.ApiController
     {
-        PlanificarService PlanificarService;
+        PlanificarService planificarService;
         public PlanificarController()
         {
-            PlanificarService = new PlanificarService();
+            planificarService = new PlanificarService();
         }
 
         [HttpPost]
@@ -23,7 +23,7 @@ namespace WebApiMovil.Controllers
         {
             try
             {
-                return PlanificarService.Login(obj);
+                return planificarService.Login(obj);
             }
             catch (Exception)
             {
@@ -37,7 +37,7 @@ namespace WebApiMovil.Controllers
         {
             try
             {
-                return PlanificarService.GenerarTarea(obj);
+                return planificarService.GenerarTarea(obj);
             }
             catch (Exception)
             {
@@ -45,14 +45,27 @@ namespace WebApiMovil.Controllers
             }
         }
          
-
         [HttpPost]
         [ActionName("BuscarMonitoreos")]
         public List<Monitoreo_Response> BuscarMonitoreos(Monitoreo_Request obj)
         {
             try
             {
-                return PlanificarService.BuscarMonitoreos(obj);
+                return planificarService.BuscarMonitoreos(obj);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        [HttpPost]
+        [ActionName("BuscarProyectosPortafolio")]
+        public List<ProyectosPortafolio_Response> BuscarProyectosPortafolio(ProyectosPortafolio_Request obj)
+        {
+            try
+            {
+                return planificarService.BuscarProyectosPortafolio(obj);
             }
             catch (Exception)
             {
@@ -66,7 +79,7 @@ namespace WebApiMovil.Controllers
         {
             try
             {
-                return PlanificarService.CargarFiltroGestion();
+                return planificarService.CargarFiltroGestion();
             }
             catch (Exception)
             {
@@ -74,13 +87,14 @@ namespace WebApiMovil.Controllers
             }
 
         }
+
         [HttpPost]
-        [ActionName("PopUpTarea")]
+        [ActionName("PopUpPlanificar")]
         public PopUp_Tarea_Response PopUpPlanificar(Tarea_Request obj)
         {
             try
             {
-                return PlanificarService.DatosPopUp(obj);
+                return planificarService.DatosPopUp(obj);
             }
             catch (Exception)
             {
@@ -94,7 +108,7 @@ namespace WebApiMovil.Controllers
         {
             try
             {
-                return PlanificarService.EliminarTarea(obj);
+                return planificarService.EliminarTarea(obj);
             }
             catch (Exception)
             {

@@ -57,6 +57,44 @@ namespace WebApiMovil.Models
     }
 
     [DataContract]
+    public class ProyectosPortafolio_Request
+    {
+        [DataMember]
+        public int nid_responsable { get; set; }
+
+        [DataMember]
+        public string codigo { get; set; }
+
+        [DataMember]
+        public string nombre { get; set; }
+
+        [DataMember]
+        public string portafolio { get; set; }
+    }
+
+    [DataContract]
+    public class ProyectosPortafolio_Response
+    {
+        [DataMember]
+        public int nid_proyecto { get; set; }
+
+        [DataMember]
+        public string co_proyecto { get; set; }
+
+        [DataMember]
+        public string no_proyecto { get; set; }
+
+        [DataMember]
+        public int nid_portafolio { get; set; }
+
+        [DataMember]
+        public string co_portafolio { get; set; }
+
+        [DataMember]
+        public string no_portafolio { get; set; }
+    }
+
+    [DataContract]
     public class Tarea_Request
     {
         [DataMember]

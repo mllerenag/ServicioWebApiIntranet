@@ -9,7 +9,6 @@ namespace WebApiMovil.Services
 {
     public class PlanificarService
     {
-
         private PlanificarBL PlanificarBL;
 
         public PlanificarService()
@@ -34,6 +33,18 @@ namespace WebApiMovil.Services
             try
             {
                 return PlanificarBL.BuscarMonitoreos(obj);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public List<ProyectosPortafolio_Response> BuscarProyectosPortafolio(ProyectosPortafolio_Request obj)
+        {
+            try
+            {
+                return PlanificarBL.BuscarProyectosPortafolio(obj);
             }
             catch (Exception)
             {

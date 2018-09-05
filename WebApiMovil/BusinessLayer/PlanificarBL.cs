@@ -32,8 +32,8 @@ namespace WebApiMovil.BusinessLayer
         {
             try
             {
-                if (obj.co_proyecto == null) obj.co_proyecto = "";
                 if (obj.co_portafolio == null) obj.co_portafolio = "";
+                if (obj.co_proyecto == null) obj.co_proyecto = "";               
                 if (obj.categoria == null) obj.categoria = "";
                 return planificarDA.BuscarMonitoreos(obj);
             }
@@ -42,6 +42,22 @@ namespace WebApiMovil.BusinessLayer
                 throw;
             }
         }
+
+        public List<ProyectosPortafolio_Response> BuscarProyectosPortafolio(ProyectosPortafolio_Request obj)
+        {
+            try
+            {
+                if (obj.codigo == null) obj.codigo = "";
+                if (obj.nombre == null) obj.nombre = "";
+                if (obj.portafolio == null) obj.portafolio = "";
+                return planificarDA.BuscarProyectosPortafolio(obj);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
 
         public List<Combo> CargarFiltroGestion()
         {
