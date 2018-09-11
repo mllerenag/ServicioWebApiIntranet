@@ -219,6 +219,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="BusinessLayer\IndicadorRecursoBL.cs" />
+    <Compile Include="BusinessLayer\LiberarBL.cs" />
     <Compile Include="BusinessLayer\ProyectoBL.cs" />
     <Compile Include="BusinessLayer\EvaluacionBalanceoBL.cs" />
     <Compile Include="BusinessLayer\MailBL.cs" />
@@ -229,6 +230,7 @@
     <Compile Include="BusinessLayer\AsignarBL.cs" />
     <Compile Include="Controllers\AsignarController.cs" />
     <Compile Include="Controllers\IndicadorRecursoController.cs" />
+    <Compile Include="Controllers\LiberarController.cs" />
     <Compile Include="Controllers\ProyectoController.cs" />
     <Compile Include="Controllers\EvaluacionBalanceoController.cs" />
     <Compile Include="Controllers\PlanificarController.cs" />
@@ -238,6 +240,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DataLayer\IndicadorRecursoDA.cs" />
+    <Compile Include="DataLayer\LiberarRecursosDA.cs" />
     <Compile Include="DataLayer\ProyectoDA.cs" />
     <Compile Include="DataLayer\EvaluacionBalanceoDA.cs" />
     <Compile Include="DataLayer\PlanificarDA.cs" />
@@ -252,6 +255,7 @@
     <Compile Include="Models\Accesorio.cs" />
     <Compile Include="Models\Asignacion.cs" />
     <Compile Include="Models\IndicadorRecurso.cs" />
+    <Compile Include="Models\PortafolioLiberar.cs" />
     <Compile Include="Models\Proyecto.cs" />
     <Compile Include="Models\EvaluacionBalanceo.cs" />
     <Compile Include="Models\Planificar.cs" />
@@ -270,6 +274,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provider\OAuthAppProvider.cs" />
     <Compile Include="Services\IndicadorRecursoService.cs" />
+    <Compile Include="Services\LiberarService.cs" />
     <Compile Include="Services\ProyectoService.cs" />
     <Compile Include="Services\PlanificarService.cs" />
     <Compile Include="Services\EvaluacionBalanceoService.cs" />
